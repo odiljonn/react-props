@@ -10,8 +10,8 @@ function App() {
       <Hello name="Odiljon" age="22">
         My hoppies is fitness
       </Hello>
-      <Hello name="shakzod" age="28" />
-      <Hello name="Mukammad" age="29" />
+      <Hello name="Mark" age="28" />
+      <Hello name="Jonh" age="29" />
     </div>
   );
 }
