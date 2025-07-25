@@ -7,7 +7,7 @@ function App() {
       <h1>hello world</h1>
       <div> odiljon</div>
 
-      <Hello name="ODILJON" age="22">
+      <Hello name="Odiljon" age="22">
         My hoppies is fitness
       </Hello>
       <Hello name="Mark" age="28" />
