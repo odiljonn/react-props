@@ -21,6 +21,7 @@ class App extends Component {
 
   render() {
     const { number } = this.state;
+    
     return (
       <div className="App">
         <h1>hello world</h1>
