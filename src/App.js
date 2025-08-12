@@ -1,19 +1,48 @@
+import { Component } from "react";
 import "./App.css";
 import Hello from "./Person/Person";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>hello world</h1>
-      <div> odiljon</div>
+class App extends Component {
+  state = {
+    person: [{ name: "odiljon", age: 22 }],
 
-      <Hello name="Odiljon" age="22">
-        My hoppies is fitness
-      </Hello>
-      <Hello name="Mark" age="28" />
-      <Hello name="Jonh" age="29" />
-    </div>
-  );
+    number: 0,
+  };
+
+  ozgartirmoq = () => {
+    this.setState({
+      person: [{ name: "latofat", age: 233, jobs: "devoloper" }],
+    });
+  };
+
+  boshqabutton = () => {
+    this.setState({ number: this.state.number + 1 });
+  };
+
+  render() {
+    const { number } = this.state;
+    return (
+      <div className="App">
+        <h1>hello world</h1>
+
+        <button onClick={this.ozgartirmoq}>click me </button>
+        <Hello
+          name={this.state.person[0].name}
+          age={this.state.person[0].age}
+          jobs={this.state.person[0].jobs}
+        >
+          My hoppies is fitness
+        </Hello>
+        <Hello name="Mark" age="28" />
+        <Hello name="Jonh" age="29" />
+
+        <section>
+          <h1> number: {number}</h1>
+          <button onClick={this.boshqabutton}>boss</button>
+        </section>
+      </div>
+    );
+  }
 }
 
 export default App;
