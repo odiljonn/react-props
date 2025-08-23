@@ -1,17 +1,18 @@
 import { Component } from "react";
 import "./App.css";
-import Hello from "./Person/Person";
+import Hello from "./components/Person/Person";
+import User from "./components/User/User";
 
 class App extends Component {
   state = {
-    person: [{ name: "odiljon", age: 22 }],
+    person: [{ name: "odiljon", age: 22, jobs: "devoloper" }],
 
-    number: 100,
+    number: 0,
   };
 
   ozgartirmoq = () => {
     this.setState({
-      person: [{ name: "latofat", age: 233, jobs: "devoloper" }],
+      person: [{ name: "latofat", age: 50, jobs: "Housewife" }],
     });
   };
 
@@ -46,6 +47,8 @@ class App extends Component {
           <button onClick={this.boshqabutton}>+</button>
           <button onClick={this.boshqabutton1}>-</button>
         </section>
+
+        <User />
       </div>
     );
   }
